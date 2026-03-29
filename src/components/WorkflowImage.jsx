@@ -27,9 +27,9 @@ const WorkflowImage = () => {
     const reader = new FileReader();
     reader.onload = (event) => {
       setSourceImageBase64(event.target.result);
-      setAnalysisResult(""); // reset
-      setVariationPrompt(""); // reset
-      setGeneratedImageUrl(""); // reset
+      setAnalysisResult("");
+      setVariationPrompt("");
+      setGeneratedImageUrl(""); 
     };
     reader.onerror = () => toast.error("Failed to read file.");
     reader.readAsDataURL(file);

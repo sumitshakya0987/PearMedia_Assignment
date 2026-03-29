@@ -2,10 +2,6 @@ import { API_MODELS } from './constants';
 
 const getGeminiKey = () => import.meta.env.VITE_GEMINI_KEY;
 const getHfKey = () => import.meta.env.VITE_HF_KEY;
-
-/**
- * Text Workflow: Enhance a prompt using Gemini
- */
 export const enhancePrompt = async (input) => {
   const apiKey = getGeminiKey();
   if (!apiKey) throw new Error("Missing Gemini API Key in .env");
@@ -29,15 +25,9 @@ export const enhancePrompt = async (input) => {
   const data = await response.json();
   return data.candidates[0].content.parts[0].text;
 };
-
-/**
- * Image Workflow: Analyze an image using Gemini Vision
- */
 export const analyzeImage = async (base64String) => {
   const apiKey = getGeminiKey();
   if (!apiKey) throw new Error("Missing Gemini API Key in .env");
-
-  // Extract mimetype and un-prefixed base64
   let mimeType = 'image/jpeg';
   let base64Data = base64String;
 
@@ -69,11 +59,6 @@ export const analyzeImage = async (base64String) => {
   const data = await response.json();
   return data.candidates[0].content.parts[0].text;
 };
-
-
-/**
- * Generate Image via Hugging Face REST endpoints using standard fetch
- */
 export const generateImageFn = async (prompt) => {
   const apiKey = getHfKey();
   if (!apiKey) throw new Error("Missing Hugging Face API Key in .env");

@@ -4,8 +4,6 @@ A responsive product prototype that integrates multiple AI APIs to perform text 
 
 ## 📸 Screenshots
 
-*(Replace with actual screenshots of your application)*
-
 ![Creative Studio - Text Workflow](./public/screenshot-creative-studio.png)
 *Creative Studio - Enhancing text prompts with Gemini to generate images.*
 
@@ -42,8 +40,8 @@ The application provides two distinct workflows:
 
 1. **Clone the repository** (if you haven't already):
    ```bash
-   git clone https://github.com/yourusername/pearmedia-ai-prototype.git
-   cd pearmedia-ai-prototype/pear-media-lab
+   git clone https://github.com/sumitshakya0987/PearMedia_Assignment
+   cd pearmedia_assignment/pear-media-lab
    ```
 
 2. **Install dependencies:**
