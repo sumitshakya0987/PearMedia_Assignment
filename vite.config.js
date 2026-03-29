@@ -5,12 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    proxy: {
-      '/hf-api': {
-        target: 'https://router.huggingface.co/hf-inference',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/hf-api/, ''),
-      }
-    }
+    proxy: {}
   }
 })

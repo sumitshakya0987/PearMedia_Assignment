@@ -63,7 +63,7 @@ export const generateImageFn = async (prompt) => {
   const apiKey = getHfKey();
   if (!apiKey) throw new Error("Missing Hugging Face API Key in .env");
 
-  const response = await fetch(`/hf-api/models/${API_MODELS.HF_IMAGE}`, {
+  const response = await fetch(`https://router.huggingface.co/hf-inference/models/${API_MODELS.HF_IMAGE}`, {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${apiKey}`,
